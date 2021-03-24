@@ -57,7 +57,7 @@ class FlowerTest {
     }
 
     @Test
-    void NeedMaintenance_TestFlowerHasNoMaintenanceDayAndHasAge156Weeks_ReturnFalse() {
+    void NeedMaintenance_TestFlowerHasNoMaintenanceDayAndHasAge156Weeks_ReturnTrue() {
         assertTrue(testFlowerCactus156WeeksOld.needMaintenance());
     }
 
@@ -69,7 +69,7 @@ class FlowerTest {
     }
 
     @Test
-    void NeedMaintenance_TestFlowerMaintained156WeeksAgoAndHasAge200Weeks_ReturnFalse() {
+    void NeedMaintenance_TestFlowerMaintained156WeeksAgoAndHasAge200Weeks_ReturnTrue() {
         LocalDate dateOfMaintenance = LocalDate.now().minus(Period.ofWeeks(156));
         testFlowerJapaneseMaple200WeeksOld.maintain(dateOfMaintenance);
         assertTrue(testFlowerJapaneseMaple200WeeksOld.needMaintenance());
